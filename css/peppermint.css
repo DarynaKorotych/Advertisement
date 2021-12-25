@@ -1,34 +1,11 @@
 body {
-  /* max-width: 100%; */
   background: url(../Twinings_Assets/peppermint-\ BG.jpg) no-repeat;
-}
-/* .container {
-  max-width: 100%;
-} */
-.wrapper {
-  width: 750px;
-}
-/* =============HEADER============ */
-header {
-  position: relative;
-}
-header div {
-  position: absolute;
-}
-.new-img {
-  left: 70px;
-  z-index: 4;
-}
-.tagline-back {
-  z-index: 1;
-}
-.tagline {
-  z-index: 2;
+  
 }
 
-/* header div {
-  position: absolute;
-}
+
+/* =============HEADER============ */
+
 .new-img {
   left: 70px;
   z-index: 4;
@@ -42,32 +19,11 @@ header div {
 }
 header div:last-child {
   z-index: 3;
-} */
+}
 /* ================MAIN=============== */
-main {
-  position: relative;
-}
-/* main div {
-  position: absolute;
-  z-index: 2;
-}
-
-.product div img {
-  display: block;
-} */
-
 .product {
   display: flex;
   transform: translateY(620px);
   justify-content: space-between;
 }
 
-button {
-  display: block;
-  border: none;
-  background: none;
-}
-
-
-
-/* ================FOOTER============= */
