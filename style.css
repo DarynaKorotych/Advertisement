@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+}
+.container {
+  max-width: 750px;
+  height: 100%;
+}
+.wrapper {
+  margin: 0 auto;
+}
+header div {
+  position: absolute;
+}
+button {
+  display: block;
+  border: none;
+  background: none;
+  margin: auto;
+}
+.shop{
+  transform: translateY(-50px);
+}
+
