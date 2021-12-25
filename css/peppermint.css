@@ -1,0 +1,47 @@
+body{
+    background: url(../Twinings_Assets/peppermint-\ BG.jpg) no-repeat;
+}
+
+/* =============HEADER============ */
+header div {
+  position: absolute;
+}
+.new-img {
+  left: 70px;
+  z-index: 4;
+}
+.tagline-back {
+  z-index: 1;
+}
+.tagline {
+  z-index: 2;
+  transform: translate(85px, 227px);
+}
+header div:last-child {
+  z-index: 3;
+}
+/* ================MAIN=============== */
+main div {
+  position: absolute;
+  z-index: 2;
+}
+
+.product div img {
+  display: block;
+}
+
+.product {
+  display: flex;
+  transform: translate(91px, 620px);
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+/* ================FOOTER============= */
+
+
+
+
