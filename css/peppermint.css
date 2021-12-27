@@ -18,25 +18,38 @@ body {
   position: relative;
   background: url(../Twinings_Assets/peppermint-\ BG.jpg) no-repeat;
   margin: 0 auto;
-  max-width: 527px;
+  max-width: 750px;
   height: 100%;
 }
 
 .container img {
   position: absolute;
   max-width: 100%;
-  max-height: 100%;
 }
 
-.newBanner{
+.tagline-back {
+  z-index: 1;
+  top: -514px;
+  animation-name: taglineBack;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes taglineBack {
+  100% {
+    top: 0px;
+  }
+}
+
+.new-banner {
   z-index: 4;
   left: 8%;
   top: -82px;
-  animation: mymove 2s 1;
+  animation-name: newBanner;
+  animation-delay: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-
-@keyframes mymove{
+@keyframes newBanner {
   100% {
     top: 0px;
   }
