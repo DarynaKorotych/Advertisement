@@ -1,29 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
 body {
+  height: 100%;
+}
+
+/* body {
   background: url(../Twinings_Assets/peppermint-\ BG.jpg) no-repeat;
-  
+} */
+
+.container {
+  position: relative;
+  background: url(../Twinings_Assets/peppermint-\ BG.jpg) no-repeat;
+  margin: 0 auto;
+  max-width: 527px;
+  height: 100%;
 }
 
+.container img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
 
-/* =============HEADER============ */
-
-.new-img {
-  left: 70px;
+.newBanner{
   z-index: 4;
+  left: 8%;
+  top: -82px;
+  animation: mymove 2s 1;
+  animation-fill-mode: forwards;
 }
+
+@keyframes mymove{
+  100% {
+    top: 0px;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+/* .new-img {
+  z-index: 4;
+  left: 9%;
+}
+
 .tagline-back {
   z-index: 1;
 }
+
 .tagline {
   z-index: 2;
-  transform: translate(85px, 227px);
-}
-header div:last-child {
-  z-index: 3;
-}
-/* ================MAIN=============== */
-.product {
+  /* transform: translate(18%, 102%); */
+/* трансформ ломает вёрстку */
+
+/* .product {
   display: flex;
   transform: translateY(620px);
   justify-content: space-between;
-}
-
+} */
