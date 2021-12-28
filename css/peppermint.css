@@ -43,16 +43,24 @@ body {
 .new-banner {
   z-index: 4;
   left: 8%;
-  top: -82px;
+  top: -100px;
+
   animation-name: newBanner;
-  animation-delay: 2s;
   animation-duration: 1s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 @keyframes newBanner {
+  0% {
+    top: -100px;
+  }
   100% {
     top: 0px;
   }
+}
+
+.pepermint-tagline {
+  z-index: 2;
 }
 
 button {
