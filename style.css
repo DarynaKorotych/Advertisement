@@ -57,13 +57,13 @@ body {
 }
 
 .new-peppermint {
-  z-index: 2;
+  z-index: 5;
   left: 67px;
   top: -100px;
 
   animation-name: newBanner;
-  animation-duration: 0.5s;
-  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 @keyframes newBanner {
@@ -75,6 +75,55 @@ body {
   }
 }
 
+.tagline-back {
+  z-index: 2;
+  top: -600px;
+
+  animation: taglineBack 1s 1s forwards;
+}
+@keyframes taglineBack {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.tagline {
+  z-index: 3;
+  left: 86px;
+  top: 227px;
+  opacity: 0;
+
+  animation: tagline 1s 2s forwards;
+}
+@keyframes tagline {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.upper-tagline {
+  z-index: 4;
+  opacity: 0;
+
+  animation: upper-tagline 1s 3s forwards;
+}
+@keyframes upper-tagline {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .product {
   z-index: 2;
   bottom: 230px;
@@ -82,7 +131,7 @@ body {
   /* left: 50%; */
   /* transform: translateX(-50%); */
 
-  animation: product 1s 2s forwards;
+  animation: product 1s 1s forwards;
 }
 
 @keyframes product {
@@ -144,5 +193,3 @@ body {
   background: none;
   cursor: pointer;
 } */
-
-
