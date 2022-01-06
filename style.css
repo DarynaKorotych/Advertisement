@@ -1,12 +1,9 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import url(./css/peppermint.css);
 
-body{
+
+
+/* body{
   margin: 0;
-  height: 100vh;
 }
 .container {
   max-width: 750px;
@@ -15,9 +12,7 @@ body{
 .wrapper {
   margin: 0 auto;
 }
-header div {
-  position: absolute;
-}
+
 button {
   display: block;
   border: none;
@@ -26,5 +21,5 @@ button {
 }
 .shop{
   transform: translateY(-50px);
-}
+} */
 
