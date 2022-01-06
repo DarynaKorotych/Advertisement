@@ -1,25 +1,148 @@
-@import url(./css/peppermint.css);
+/* @import url(./css/peppermint.css);
+@import url(./css/raspberry.css); */
 
-
-
-/* body{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
 }
-.container {
-  max-width: 750px;
-  height: 100%;
-}
-.wrapper {
-  margin: 0 auto;
+
+body {
+  background-color: rgb(208, 205, 255);
+  overflow-x: hidden;
 }
 
-button {
-  display: block;
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 750px;
+  min-height: 1334px;
+}
+
+.slide div {
+  position: absolute;
+}
+
+.carousel .arrow {
+  bottom: 230px;
+  cursor: pointer;
+}
+
+.carousel .prev,
+.carousel .next {
+  position: absolute;
+  z-index: 10;
+  height: 451px;
   border: none;
   background: none;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  transition: all 0.7s;
 }
-.shop{
-  transform: translateY(-50px);
+
+.carousel .prev:hover,
+.carousel .next:hover {
+  opacity: 1;
+}
+
+.carousel .prev {
+  left: 60px;
+}
+
+.carousel .next {
+  right: 60px;
+}
+
+.new-peppermint {
+  z-index: 2;
+  left: 67px;
+  top: -100px;
+
+  animation-name: newBanner;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes newBanner {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.product {
+  z-index: 2;
+  bottom: 230px;
+  right: -500px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+
+  animation: product 1s 2s forwards;
+}
+
+@keyframes product {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 137px;
+  }
+}
+
+.shop {
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* html,
+body {
+  height: 100%;
 } */
+
+/* .container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 750px;
+  min-height: 1334px;
+} */
+
+/* .product {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+} */
+
+/* .product div {
+  position: absolute;
+  width: 466px;
+  height: 466px;
+  padding: 0 58px;
+} */
+
+/* .main {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+  bottom: 230px;
+  overflow: hidden;
+} */
+
+/* button {
+  height: 451px;
+  border: none;
+  background: none;
+  cursor: pointer;
+} */
+
 
