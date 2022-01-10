@@ -9,7 +9,6 @@
 }
 
 body {
-  background-color: rgb(208, 205, 255);
   overflow-x: hidden;
 }
 
@@ -56,6 +55,20 @@ body {
   right: 60px;
 }
 
+.arrow{
+  opacity: 0;
+
+  animation: arrow 2s 3s forwards;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .new-peppermint {
   z-index: 5;
   left: 67px;
@@ -72,6 +85,20 @@ body {
   }
   100% {
     top: 0px;
+  }
+}
+
+.new{
+  opacity: 0;
+
+  animation: new 2s 2s forwards;
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -133,7 +160,6 @@ body {
 
   animation: product 1s 1s forwards;
 }
-
 @keyframes product {
   0% {
     right: -500px;
@@ -149,47 +175,16 @@ body {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
+
+  animation: shop 2s 4s forwards;
+}
+@keyframes shop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/* html,
-body {
-  height: 100%;
-} */
-
-/* .container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 750px;
-  min-height: 1334px;
-} */
-
-/* .product {
-  display: flex;
-  flex-direction: row;
-  overflow-x: hidden;
-} */
-
-/* .product div {
-  position: absolute;
-  width: 466px;
-  height: 466px;
-  padding: 0 58px;
-} */
-
-/* .main {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  padding: 0 20px;
-  bottom: 230px;
-  overflow: hidden;
-} */
-
-/* button {
-  height: 451px;
-  border: none;
-  background: none;
-  cursor: pointer;
-} */
