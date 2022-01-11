@@ -8,17 +8,28 @@
   margin: 0;
 }
 
-body {
-  overflow-x: hidden;
+a {
+  display: block;
 }
 
 .carousel {
+  background-image: url(./Twinings_Assets/peppermint-\ BG.jpg);
   display: flex;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  max-width: 750px;
-  min-height: 1334px;
+  width: 750px;
+  height: 1334px;
+}
+
+.carousel-holder {
+  transition-property: transform;
+}
+
+.carousel-holder .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .slide div {
@@ -55,12 +66,30 @@ body {
   right: 60px;
 }
 
-.arrow{
+.arrow {
   opacity: 0;
 
   animation: arrow 2s 3s forwards;
 }
 @keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .peppermint {
+  z-index: 9;
+} */
+
+.background {
+  opacity: 0;
+
+  animation: background 2s 1s forwards;
+}
+@keyframes background {
   0% {
     opacity: 0;
   }
@@ -76,7 +105,7 @@ body {
 
   animation-name: newBanner;
   animation-duration: 1s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 @keyframes newBanner {
@@ -88,10 +117,12 @@ body {
   }
 }
 
-.new{
+.new {
+  z-index: 5;
+  left: 67px;
   opacity: 0;
 
-  animation: new 2s 2s forwards;
+  animation: new 2s 1s forwards;
 }
 @keyframes new {
   0% {
@@ -136,11 +167,15 @@ body {
   }
 }
 
-.upper-tagline {
+.upper-tagline-mint {
+  opacity: 0;
+}
+
+.upper-tagline:not(.upper-tagline-mint) {
   z-index: 4;
   opacity: 0;
 
-  animation: upper-tagline 1s 3s forwards;
+  animation: upper-tagline 2s 1s forwards;
 }
 @keyframes upper-tagline {
   0% {
@@ -158,7 +193,7 @@ body {
   /* left: 50%; */
   /* transform: translateX(-50%); */
 
-  animation: product 1s 1s forwards;
+  animation: product 1.5s 1s forwards;
 }
 @keyframes product {
   0% {
@@ -171,13 +206,13 @@ body {
 
 .shop {
   position: absolute;
-  z-index: 2;
+  z-index: 9;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
 
-  animation: shop 2s 4s forwards;
+  animation: shop 2s 3s forwards;
 }
 @keyframes shop {
   0% {
@@ -187,4 +222,3 @@ body {
     opacity: 1;
   }
 }
-
