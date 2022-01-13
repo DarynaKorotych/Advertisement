@@ -12,47 +12,56 @@ a {
   display: block;
 }
 
-.carousel {
-  background-image: url(./Twinings_Assets/peppermint-\ BG.jpg);
-  display: flex;
-  overflow: hidden;
-  position: relative;
+.container {
+  /* background-image: url(./Twinings_Assets/peppermint-\ BG.jpg); */
   margin: 0 auto;
-  width: 750px;
-  height: 1334px;
+  max-width: 768px;
 }
 
-.carousel-holder .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* left: 0; */
+.slider {
+  width: 750px;
+  height: 1334px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-item {
+  width: 2250px;
+  height: 1334px;
+  display: flex;
+  left: 0;
+  position: relative;
   transition: all ease 1s;
 }
 
-.peppermint {
-  z-index: 8;
-}
+/* .slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+} */
 
+/* 
 .raspberry{
   z-index: 7;
 }
 
 .peach{
   z-index: 6;
-}
+} */
 
-.slide div {
+/* .slide div {
   position: absolute;
-}
+} */
 
-.carousel .arrow {
+.container .arrow {
   bottom: 230px;
   cursor: pointer;
 }
 
-.carousel .prev,
-.carousel .next {
+.container .prev,
+.container .next {
   position: absolute;
   z-index: 9;
   height: 451px;
@@ -63,11 +72,11 @@ a {
   transition: all 0.7s;
 }
 
-.carousel .prev {
+.container .prev {
   left: 60px;
 }
 
-.carousel .next {
+.container .next {
   right: 60px;
 }
 
@@ -85,7 +94,31 @@ a {
   }
 }
 
-.background {
+.shop {
+  position: absolute;
+  /* z-index: 9; */
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+
+  animation: shop 2s 3s forwards;
+}
+@keyframes shop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===== PEPPERMINT ===== */
+.peppermint {
+  position: relative;
+}
+
+.background-peppermint {
   opacity: 0;
 
   animation: background 2s 1s forwards;
@@ -100,6 +133,7 @@ a {
 }
 
 .new-peppermint {
+  position: absolute;
   z-index: 5;
   left: 67px;
   top: -100px;
@@ -118,23 +152,8 @@ a {
   }
 }
 
-.new {
-  z-index: 5;
-  left: 67px;
-  opacity: 0;
-
-  animation: new 2s 1s forwards;
-}
-@keyframes new {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.tagline-back {
+.tagline-back-peppermint {
+  position: absolute;
   z-index: 2;
   top: -600px;
 
@@ -149,7 +168,8 @@ a {
   }
 }
 
-.tagline {
+.tagline-peppermint {
+  position: absolute;
   z-index: 3;
   left: 86px;
   top: 227px;
@@ -168,26 +188,16 @@ a {
   }
 }
 
-.upper-tagline-mint {
+.upper-tagline-peppermint {
+  position: absolute;
   opacity: 0;
+  top: 0;
+
+  animation: upper-tagline 2s 3s forwards;
 }
 
-.upper-tagline:not(.upper-tagline-mint) {
-  z-index: 4;
-  opacity: 0;
-
-  animation: upper-tagline 2s 1s forwards;
-}
-@keyframes upper-tagline {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.product {
+.product-peppermint {
+  position: absolute;
   z-index: 2;
   bottom: 230px;
   right: -500px;
@@ -203,21 +213,146 @@ a {
   }
 }
 
-.shop {
-  position: absolute;
-  z-index: 9;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+/* ===== RASPBERRY ===== */
+.raspberry {
+  position: relative;
+}
+
+.background-raspberry {
+  /* position: absolute; */
   opacity: 0;
 
-  animation: shop 2s 3s forwards;
+  animation: background 2s 1s forwards;
 }
-@keyframes shop {
+@keyframes background {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+.new-raspberry {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 67px;
+  opacity: 0;
+
+  animation: new 2s 1s forwards;
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.upper-tagline-raspberry {
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  top: 0;
+
+  animation: upper-tagline 2s 1s forwards;
+}
+@keyframes upper-tagline {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product-raspberry {
+  position: absolute;
+  z-index: 2;
+  bottom: 230px;
+  right: -500px;
+
+  animation: product 1.5s 1s forwards;
+}
+@keyframes product {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 137px;
+  }
+}
+
+/* ===== PEACH ===== */
+.peach {
+  position: relative;
+}
+
+.background-peach {
+  /* position: absolute; */
+  opacity: 0;
+
+  animation: background 2s 1s forwards;
+}
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-peach {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 67px;
+  opacity: 0;
+
+  animation: new 2s 1s forwards;
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.upper-tagline-peach {
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  top: 0;
+
+  animation: upper-tagline 2s 1s forwards;
+}
+@keyframes upper-tagline {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product-peach {
+  position: absolute;
+  z-index: 2;
+  bottom: 230px;
+  right: -500px;
+
+  animation: product 1.5s 1s forwards;
+}
+@keyframes product {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 137px;
   }
 }
