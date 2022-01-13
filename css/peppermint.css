@@ -1,29 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
 body {
-  background: url(../Twinings_Assets/peppermint-\ BG.jpg) no-repeat;
-  
+  height: 100%;
 }
 
+.loader {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
 
-/* =============HEADER============ */
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 750px;
+  height: 100%;
+}
 
-.new-img {
-  left: 70px;
+.container > img {
+  position: absolute;
+  max-width: 100%;
+}
+
+.container > div{
+  position: relative;
+  max-width: 100%;
+  top: 70%;
+}
+
+.background {
+  z-index: 1;
+}
+
+.tagline-back {
+  z-index: 2;
+  top: 600px;
+
+  animation-name: taglineBack;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes taglineBack {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.new-banner {
   z-index: 4;
+  left: 8%;
+  top: -100px;
+
+  animation-name: newBanner;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
+@keyframes newBanner {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.tagline {
+  z-index: 3;
+  left: 11%;
+  top: 24%;
+  opacity: 0;
+  
+  animation: tagline 1s 1s forwards;
+}
+@keyframes tagline {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* .upper-tagline {
+  z-index: 1;
+} надо подумать*/
+
+.main {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* .new-img {
+  z-index: 4;
+  left: 9%;
+}
+
 .tagline-back {
   z-index: 1;
 }
+
 .tagline {
   z-index: 2;
-  transform: translate(85px, 227px);
-}
-header div:last-child {
-  z-index: 3;
-}
-/* ================MAIN=============== */
-.product {
+  /* transform: translate(18%, 102%); */
+/* трансформ ломает вёрстку */
+
+/* .product {
   display: flex;
   transform: translateY(620px);
   justify-content: space-between;
-}
-
+} */

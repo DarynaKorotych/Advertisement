@@ -1,30 +1,358 @@
+/* @import url(./css/peppermint.css);
+@import url(./css/raspberry.css); */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
-body{
-  margin: 0;
-  height: 100vh;
-}
-.container {
-  max-width: 750px;
-  height: 100%;
-}
-.wrapper {
-  margin: 0 auto;
-}
-header div {
-  position: absolute;
-}
-button {
+a {
   display: block;
+}
+
+.container {
+  /* background-image: url(./Twinings_Assets/peppermint-\ BG.jpg); */
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.slider {
+  width: 750px;
+  height: 1334px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-item {
+  width: 2250px;
+  height: 1334px;
+  display: flex;
+  left: 0;
+  position: relative;
+  transition: all ease 1s;
+}
+
+/* .slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+} */
+
+/* 
+.raspberry{
+  z-index: 7;
+}
+
+.peach{
+  z-index: 6;
+} */
+
+/* .slide div {
+  position: absolute;
+} */
+
+.container .arrow {
+  bottom: 230px;
+  cursor: pointer;
+}
+
+.container .prev,
+.container .next {
+  position: absolute;
+  z-index: 9;
+  height: 451px;
   border: none;
   background: none;
-  margin: auto;
-}
-.shop{
-  transform: translateY(-50px);
+  display: flex;
+  align-items: center;
+  transition: all 0.7s;
 }
 
+.container .prev {
+  left: 60px;
+}
+
+.container .next {
+  right: 60px;
+}
+
+.arrow {
+  opacity: 0;
+
+  animation: arrow 2s 3s forwards;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shop {
+  position: absolute;
+  /* z-index: 9; */
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+
+  animation: shop 2s 3s forwards;
+}
+@keyframes shop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===== PEPPERMINT ===== */
+.peppermint {
+  position: relative;
+}
+
+.background-peppermint {
+  opacity: 0;
+
+  animation: background 2s 1s forwards;
+}
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-peppermint {
+  position: absolute;
+  z-index: 5;
+  left: 67px;
+  top: -100px;
+
+  animation-name: newBanner;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes newBanner {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.tagline-back-peppermint {
+  position: absolute;
+  z-index: 2;
+  top: -600px;
+
+  animation: taglineBack 1s 1s forwards;
+}
+@keyframes taglineBack {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.tagline-peppermint {
+  position: absolute;
+  z-index: 3;
+  left: 86px;
+  top: 227px;
+  opacity: 0;
+
+  animation: tagline 1s 2s forwards;
+}
+@keyframes tagline {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.upper-tagline-peppermint {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+
+  animation: upper-tagline 2s 3s forwards;
+}
+
+.product-peppermint {
+  position: absolute;
+  z-index: 2;
+  bottom: 230px;
+  right: -500px;
+
+  animation: product 1.5s 1s forwards;
+}
+@keyframes product {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 137px;
+  }
+}
+
+/* ===== RASPBERRY ===== */
+.raspberry {
+  position: relative;
+}
+
+.background-raspberry {
+  /* position: absolute; */
+  opacity: 0;
+
+  animation: background 2s 1s forwards;
+}
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-raspberry {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 67px;
+  opacity: 0;
+
+  animation: new 2s 1s forwards;
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.upper-tagline-raspberry {
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  top: 0;
+
+  animation: upper-tagline 2s 1s forwards;
+}
+@keyframes upper-tagline {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product-raspberry {
+  position: absolute;
+  z-index: 2;
+  bottom: 230px;
+  right: -500px;
+
+  animation: product 1.5s 1s forwards;
+}
+@keyframes product {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 137px;
+  }
+}
+
+/* ===== PEACH ===== */
+.peach {
+  position: relative;
+}
+
+.background-peach {
+  /* position: absolute; */
+  opacity: 0;
+
+  animation: background 2s 1s forwards;
+}
+@keyframes background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-peach {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 67px;
+  opacity: 0;
+
+  animation: new 2s 1s forwards;
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.upper-tagline-peach {
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  top: 0;
+
+  animation: upper-tagline 2s 1s forwards;
+}
+@keyframes upper-tagline {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product-peach {
+  position: absolute;
+  z-index: 2;
+  bottom: 230px;
+  right: -500px;
+
+  animation: product 1.5s 1s forwards;
+}
+@keyframes product {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 137px;
+  }
+}
