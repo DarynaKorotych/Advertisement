@@ -1,22 +1,23 @@
 let offset = 0; //смещение от левого края
 // var slideProduct = ['.peppermint .product', '.raspberry .product', '.peach .product'];
-const slider = document.querySelector('.slide');
-
+const slider = document.querySelector('.slider-item');
 
 document.querySelector('.next').addEventListener('click', function () {
     offset += 750;
-    if (offset > 2250) {
+    if (offset > 1500) {
         offset = 0;
+        
     }
     slider.style.left = -offset + 'px';
 });
 document.querySelector('.prev').addEventListener('click', function () {
     offset -= 750;
-    if (offset < 0) {
+    if (offset > 0) {
         offset = 0;
     }
     slider.style.left = -offset + 'px';
 });
+
 
 
 
