@@ -22,14 +22,24 @@ a {
   height: 1334px;
 }
 
-.carousel-holder {
-  transition-property: transform;
-}
-
 .carousel-holder .slide {
   position: absolute;
   width: 100%;
   height: 100%;
+  /* left: 0; */
+  transition: all ease 1s;
+}
+
+.peppermint {
+  z-index: 8;
+}
+
+.raspberry{
+  z-index: 7;
+}
+
+.peach{
+  z-index: 6;
 }
 
 .slide div {
@@ -44,18 +54,13 @@ a {
 .carousel .prev,
 .carousel .next {
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   height: 451px;
   border: none;
   background: none;
   display: flex;
   align-items: center;
   transition: all 0.7s;
-}
-
-.carousel .prev:hover,
-.carousel .next:hover {
-  opacity: 1;
 }
 
 .carousel .prev {
@@ -79,10 +84,6 @@ a {
     opacity: 1;
   }
 }
-
-/* .peppermint {
-  z-index: 9;
-} */
 
 .background {
   opacity: 0;
@@ -190,8 +191,6 @@ a {
   z-index: 2;
   bottom: 230px;
   right: -500px;
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
 
   animation: product 1.5s 1s forwards;
 }
